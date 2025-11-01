@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Array Cardio 💪</title>
   <link rel="icon" href="https://fav.farm/🔥" />
 </head>
+
 <body>
   <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
   <script>
@@ -35,7 +37,7 @@
       'Berne, Eric', 'Berra, Yogi', 'Berry, Wendell', 'Bevan, Aneurin', 'Ben-Gurion, David', 'Bevel, Ken', 'Biden, Joseph', 'Bennington, Chester', 'Bierce, Ambrose',
       'Billings, Josh', 'Birrell, Augustine', 'Blair, Tony', 'Beecher, Henry', 'Biondo, Frank'
     ];
-    
+
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
     const inventorsBornIn1500 = inventors => inventors.filter(
@@ -52,9 +54,9 @@
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
-    const sortedInventors= inventors
+    const sortedInventors = inventors
       .slice()
-      .sort((a,b) => a.year - b.year);
+      .sort((a, b) => a.year - b.year);
 
     console.table(sortedInventors);
 
@@ -63,29 +65,33 @@
     const totalYearsLived = inventors.reduce((total, inventor) => {
       return total += inventor.passed - inventor.year;
     }, 0);
-    
+
     console.log(`Total years lived: ${totalYearsLived}`);
 
     // 5. Sort the inventors by years lived
     const getYearsLived = (yearPassed, yearBorn) => yearPassed - yearBorn;
 
     const inventorsByYearsLived = inventors
-    .slice()
-    .sort((a,b) => getYearsLived(b.passed, b.year) - getYearsLived(a.passed, a.year));
+      .slice()
+      .sort((a, b) => getYearsLived(b.passed, b.year) - getYearsLived(a.passed, a.year));
 
     console.table(inventorsByYearsLived)
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-    const onlyBoulevards = arr.filter(boulevard => boulevard.includes('de'));
+    //const onlyBoulevards = arr.filter(boulevard => boulevard.includes('de'));
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    const sortedByLastName = people.slice().sort();
+
+    console.table(sortedByLastName);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
-    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
 
   </script>
 </body>
+
 </html>
