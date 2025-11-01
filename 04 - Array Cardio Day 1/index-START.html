@@ -91,6 +91,13 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
 
+    const sumNumRepeats = data.reduce((names, currProp) => {
+      const currName = names[currProp] ?? 0;
+      names[currProp] = currName + 1;
+      return names;
+    }, {});
+
+    console.table(sumNumRepeats)
   </script>
 </body>
 
